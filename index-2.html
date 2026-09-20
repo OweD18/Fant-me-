@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fantômes — Débusque les abonnements que tu paies sans t'en servir</title>
+<meta name="description" content="On passe ton relevé bancaire au peigne fin et on te renvoie la liste des prélèvements oubliés, classés par coût annuel, avec les lettres de résiliation prêtes.">
+<meta property="og:title" content="Fantômes — Débusque les abonnements que tu paies sans t'en servir">
+<meta property="og:description" content="La liste de tes prélèvements oubliés, classés par coût annuel, avec les lettres de résiliation prêtes. 19 €.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --encre:#151C22;
+    --ambre:#E8A33D;
+    --papier:#FAF7F2;
+    --gris:#5C6670;
+    --trait:#E3DCD1;
+    --serif:"Fraunces",Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    box-sizing:border-box;
+  }
+  *,*::before,*::after{box-sizing:inherit;}
+  body{
+    margin:0;
+    background:var(--papier);
+    color:var(--encre);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;}
+  .wrap{max-width:560px;margin:0 auto;padding:0 20px;}
+
+  /* ---------- En-tête ---------- */
+  header{padding:28px 0 8px;}
+  .logo{
+    font-family:var(--serif);font-weight:700;font-size:19px;letter-spacing:-.01em;
+    display:inline-flex;align-items:center;gap:8px;
+  }
+  .logo span{
+    width:9px;height:9px;border-radius:50%;background:var(--ambre);
+    display:inline-block;
+  }
+
+  /* ---------- Héros ---------- */
+  h1{
+    font-family:var(--serif);font-weight:700;
+    font-size:clamp(34px,9vw,46px);line-height:1.08;letter-spacing:-.02em;
+    margin:18px 0 0;
+  }
+  .surlig{
+    background:linear-gradient(to top,rgba(232,163,61,.45) 42%,transparent 42%);
+    padding:0 2px;
+  }
+  .sous{font-size:18px;color:var(--gris);margin:18px 0 0;}
+
+  /* ---------- Chiffre douleur ---------- */
+  .douleur{
+    margin:30px 0 0;padding:22px;border:1px solid var(--trait);border-radius:14px;
+    background:#fff;
+  }
+  .chiffre{
+    font-family:var(--serif);font-weight:700;font-size:40px;line-height:1;
+    display:block;
+  }
+  .douleur p{margin:10px 0 0;color:var(--gris);font-size:16px;}
+
+  /* ---------- Bénéfices ---------- */
+  h2{
+    font-family:var(--serif);font-weight:600;font-size:24px;
+    letter-spacing:-.01em;margin:44px 0 16px;
+  }
+  ul.benef{list-style:none;padding:0;margin:0;}
+  ul.benef li{
+    padding:16px 0;border-top:1px solid var(--trait);
+    display:flex;gap:14px;align-items:flex-start;
+  }
+  ul.benef li:last-child{border-bottom:1px solid var(--trait);}
+  .num{
+    font-family:var(--serif);font-weight:700;color:var(--ambre);
+    font-size:20px;line-height:1.3;flex:0 0 auto;
+  }
+  .benef b{display:block;font-weight:600;}
+  .benef small{color:var(--gris);font-size:15.5px;line-height:1.5;display:block;margin-top:2px;}
+
+  /* ---------- Offre ---------- */
+  .offre{
+    margin:44px 0 0;padding:26px 22px;border-radius:16px;
+    background:var(--encre);color:var(--papier);text-align:center;
+  }
+  .prix{font-family:var(--serif);font-weight:700;font-size:44px;line-height:1;}
+  .prix em{font-style:normal;font-size:17px;font-family:var(--sans);opacity:.7;}
+  .offre p{margin:10px 0 0;font-size:16px;opacity:.8;}
+  .cta{
+    display:block;width:100%;margin:22px 0 0;padding:18px 20px;
+    background:var(--ambre);color:var(--encre);
+    font-family:var(--sans);font-size:18px;font-weight:700;
+    text-decoration:none;text-align:center;border:0;border-radius:12px;
+    cursor:pointer;
+  }
+  .cta:active{transform:translateY(1px);}
+  .rassure{margin:14px 0 0;font-size:14px;opacity:.65;}
+
+  /* ---------- Comment ça marche ---------- */
+  ol.etapes{padding-left:20px;margin:0;color:var(--gris);}
+  ol.etapes li{margin-bottom:10px;}
+  ol.etapes b{color:var(--encre);font-weight:600;}
+
+  /* ---------- Pied ---------- */
+  footer{
+    margin:56px 0 0;padding:24px 0 40px;border-top:1px solid var(--trait);
+    font-size:14px;color:var(--gris);
+  }
+  footer a{color:var(--gris);}
+  footer nav{margin-bottom:10px;display:flex;gap:16px;flex-wrap:wrap;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="logo"><span></span>Fantômes</div>
+  </header>
+
+  <h1>Tu paies des abonnements <span class="surlig">dont tu ne te sers plus</span>.</h1>
+  <p class="sous">Envoie ton relevé bancaire. On te renvoie la liste, classée du plus cher au moins cher — sur l'année, pas sur le mois.</p>
+
+  <div class="douleur">
+    <span class="chiffre">442 €</span>
+    <p>C'est ce que coûte, sur un an, trois prélèvements de 12 € qu'on a oublié de résilier. Sur un relevé, ils passent inaperçus. Sur douze mois, non.</p>
+  </div>
+
+  <h2>Ce que tu reçois</h2>
+  <ul class="benef">
+    <li><span class="num">1</span><div><b>La liste de tes fantômes</b><small>Chaque prélèvement régulier repéré, avec son vrai coût annuel.</small></div></li>
+    <li><span class="num">2</span><div><b>Les lettres de résiliation</b><small>Prêtes à envoyer, une par abonnement. Tu copies, tu envoies.</small></div></li>
+    <li><span class="num">3</span><div><b>Le total récupéré</b><small>Le montant exact que tu remets dans ta poche cette année.</small></div></li>
+  </ul>
+
+  <div class="offre">
+    <div class="prix">19 €<em> une fois</em></div>
+    <p>Pas d'abonnement. C'est bien le minimum, vu le sujet.</p>
+    <a class="cta" href="https://buy.stripe.com/test_14AbJ378n58q2T78fd3AY01">Lancer mon audit</a>
+    <p class="rassure">Résultat sous 48 h. Si on ne trouve rien, on te rembourse.</p>
+  </div>
+
+  <h2>Comment ça marche</h2>
+  <ol class="etapes">
+    <li><b>Tu paies</b> — 30 secondes, carte bancaire.</li>
+    <li><b>Tu envoies ton relevé</b> — le PDF ou le CSV de ta banque, par email.</li>
+    <li><b>Tu reçois ton audit</b> — sous 48 h, avec les lettres prêtes.</li>
+  </ol>
+
+  <footer>
+    <nav>
+      <a href="/mentions-legales.html">Mentions légales</a>
+      <a href="/cgv.html">CGV</a>
+      <a href="/confidentialite.html">Confidentialité</a>
+    </nav>
+    Fantômes — contact : <a href="mailto:dorian.bonomo@gmail.com">dorian.bonomo@gmail.com</a>
+  </footer>
+
+</div>
+
+</body>
+</html>
